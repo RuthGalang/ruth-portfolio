@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruth Galang | Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/faefb3c65f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hello, I am <span>Ruth Galang</span></h1>
+                <p>I'm a Frontend Web Developer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="images/bgnew.jpg">
+                </div>
+                <div class="col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloremque quaerat perspiciatis nam illum, dolor, voluptas eligendi necessitatibus quidem commodi earum tempore. Porro itaque, alias est quod voluptates magnam quae.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div> 
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2012 - 2017</span><br>Bachelor of Science in Computer Engineering at STI College</li>
+                            <li><span>August - September 2022</span><br>Software Engineering at Zuitt Coding Bootcamp</li>
+                        </ul>
+                    </div>   
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2018 - 2021</span><br>Information Communication Technology Staff at St. James Hospital, Inc.</li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="project-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Web Developer's Portfolio</h3>
+                        <p>The first capstone project that is created using HTML, CSS and Bootstrap.</p>
+                        <a href="https://ruthgalang.github.io/portfolio/" target="_blank"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>E-commerce API</h3>
+                        <p>An E-commerce API using Express.js, MongoDB and Node.js that is being tested to Postman.</p>
+                        <a href="https://glacial-tor-69822.herokuapp.com/products/" target="_blank"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Ibywind PH E-commerce App</h3>
+                        <p>An E-commerce application using React.js and Bootstrap. Project 2 (E-Commerce API) was being used as the back-end for this web app.</p>
+                        <a href="https://ecommerce-app-9ypi.vercel.app/" target="_blank"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>galangruthn@gmail.com</p>
+                    <div class="socmed-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>

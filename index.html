@@ -12,15 +12,17 @@
     <div id="header">
         <div class="container">
             <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <h1>Hello, I am <span>Ruth Galang</span></h1>
+                <h1>Hello, I am <span><br>Ruth Galang</span></h1>
                 <p>I'm a Frontend Web Developer</p>
             </div>
         </div>
@@ -59,8 +61,8 @@
 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>2018 - 2021</span><br>Information Communication Technology Staff at St. James Hospital, Inc.</li>
                             <li><span>2017 - 2018</span><br>Purchasing Engineer at INOAC Philippines Corp.</li>
+                            <li><span>2018 - 2021</span><br>Information Communication Technology Staff at St. James Hospital, Inc.</li>
                         </ul>
                     </div> 
                 </div>
@@ -103,7 +105,7 @@
     </div>
 
     <!-- Contact -->
-    <div class="contact">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-left">
@@ -143,6 +145,20 @@
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+
+        var sidemenus = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenus.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenus.style.right = "-200px";
         }
 
     </script>

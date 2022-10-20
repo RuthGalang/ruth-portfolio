@@ -135,12 +135,12 @@ nav ul li a:hover::after {
 
 .tab-contents ul li {
     list-style: none;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .tab-contents ul li span {
     color: #5F9DF7;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .tab-contents {
@@ -154,6 +154,7 @@ nav ul li a:hover::after {
 /* Projects */
 #projects {
     padding: 50px 0;
+    padding-bottom: 230px;
 }
 
 .project-list {
@@ -179,7 +180,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #5F9DF7);
+    background: linear-gradient(rgba(0,0,0,0.8), #5F9DF7);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -219,4 +220,88 @@ nav ul li a:hover::after {
 
 .work:hover .layer {
     height: 100%;
+}
+
+/* Contact */
+.col-left {
+    flex-basis: 35%;
+}
+
+.col-right {
+    flex-basis: 60%;
+}
+
+.col-left p {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.col-left p i {
+    color: #5F9DF7;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.socmed-icons {
+    margin-top: 30px;
+}
+
+.socmed-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 20px;
+    color: #fff;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.socmed-icons a:hover {
+    color: #5F9DF7;
+    transform: translateY(-6px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background-color: #5F9DF7;
+    border-radius: 6px;
+}
+
+.col-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+form .btn2 {
+    padding: 14px 40px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 300;
+    background: #262626;
+    margin-top: 20px;
+}
+
+/* SMALL SCREENS */
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(./images/phonebg.png);
+    }
 }
